@@ -1,0 +1,15 @@
+PODS:
+  - React (0.2.1):
+    - React/Core (= 0.2.1)
+  - React/Core (0.2.1)
+  - Starscream (0.9.2)
+
+DEPENDENCIES:
+  - React (= 0.2.1)
+  - Starscream (= 0.9.2)
+
+SPEC CHECKSUMS:
+  React: a7828490bf8e5976d201558a28cb812c498a0eeb
+  Starscream: 7b58834eff655baf6ec456c5dd056ec62fd147c9
+
+COCOAPODS: 0.36.3

@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06038A4D81E86B2A54822453 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820CE6FCECE49977AF18A7D2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		848FE0041ACDE40400C61CDE /* RCTWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 848FE0031ACDE40400C61CDE /* RCTWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		848FE00A1ACDE40400C61CDE /* RCTWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848FDFFE1ACDE40400C61CDE /* RCTWebSocket.framework */; };
 		848FE0111ACDE40400C61CDE /* RCTWebSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FE0101ACDE40400C61CDE /* RCTWebSocketTests.swift */; };
+		848FE01D1ACDE42F00C61CDE /* WebSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FE01A1ACDE42F00C61CDE /* WebSocketHandler.swift */; };
+		848FE01E1ACDE42F00C61CDE /* RCTWebSocketManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 848FE01B1ACDE42F00C61CDE /* RCTWebSocketManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		848FE01F1ACDE42F00C61CDE /* RCTWebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 848FE01C1ACDE42F00C61CDE /* RCTWebSocketManager.m */; };
+		FFFE3F3D932D909746F2EE0B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820CE6FCECE49977AF18A7D2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9C7851A55C235377D8C590 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		55C33577118277E20C2D393B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		820CE6FCECE49977AF18A7D2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FDFFE1ACDE40400C61CDE /* RCTWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RCTWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FE0021ACDE40400C61CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848FE0031ACDE40400C61CDE /* RCTWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWebSocket.h; sourceTree = "<group>"; };
 		848FE0091ACDE40400C61CDE /* RCTWebSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTWebSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FE00F1ACDE40400C61CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848FE0101ACDE40400C61CDE /* RCTWebSocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTWebSocketTests.swift; sourceTree = "<group>"; };
+		848FE01A1ACDE42F00C61CDE /* WebSocketHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketHandler.swift; sourceTree = "<group>"; };
+		848FE01B1ACDE42F00C61CDE /* RCTWebSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTWebSocketManager.h; sourceTree = "<group>"; };
+		848FE01C1ACDE42F00C61CDE /* RCTWebSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTWebSocketManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFE3F3D932D909746F2EE0B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +56,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				848FE00A1ACDE40400C61CDE /* RCTWebSocket.framework in Frameworks */,
+				06038A4D81E86B2A54822453 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4A2BF3CD4468B802A9C267 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				820CE6FCECE49977AF18A7D2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34178A4BDD6EFEAE93EAF471 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A9C7851A55C235377D8C590 /* Pods.debug.xcconfig */,
+				55C33577118277E20C2D393B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		848FDFF41ACDE40400C61CDE = {
 			isa = PBXGroup;
 			children = (
 				848FE0001ACDE40400C61CDE /* RCTWebSocket */,
 				848FE00D1ACDE40400C61CDE /* RCTWebSocketTests */,
 				848FDFFF1ACDE40400C61CDE /* Products */,
+				34178A4BDD6EFEAE93EAF471 /* Pods */,
+				0C4A2BF3CD4468B802A9C267 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				848FE0031ACDE40400C61CDE /* RCTWebSocket.h */,
+				848FE01A1ACDE42F00C61CDE /* WebSocketHandler.swift */,
+				848FE01B1ACDE42F00C61CDE /* RCTWebSocketManager.h */,
+				848FE01C1ACDE42F00C61CDE /* RCTWebSocketManager.m */,
 				848FE0011ACDE40400C61CDE /* Supporting Files */,
 			);
 			path = RCTWebSocket;
@@ -109,6 +144,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848FE01E1ACDE42F00C61CDE /* RCTWebSocketManager.h in Headers */,
 				848FE0041ACDE40400C61CDE /* RCTWebSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,10 +156,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848FE0141ACDE40400C61CDE /* Build configuration list for PBXNativeTarget "RCTWebSocket" */;
 			buildPhases = (
+				84A44008EF781C2EFCF23D01 /* Check Pods Manifest.lock */,
 				848FDFF91ACDE40400C61CDE /* Sources */,
 				848FDFFA1ACDE40400C61CDE /* Frameworks */,
 				848FDFFB1ACDE40400C61CDE /* Headers */,
 				848FDFFC1ACDE40400C61CDE /* Resources */,
+				EF5B928549D8140051F411EF /* Embed Pods Frameworks */,
+				39B61DFC449AD68975ED4027 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848FE0171ACDE40400C61CDE /* Build configuration list for PBXNativeTarget "RCTWebSocketTests" */;
 			buildPhases = (
+				E9AB5E1967F63C3E563353D0 /* Check Pods Manifest.lock */,
 				848FE0051ACDE40400C61CDE /* Sources */,
 				848FE0061ACDE40400C61CDE /* Frameworks */,
 				848FE0071ACDE40400C61CDE /* Resources */,
+				1B11C8741E332049F66FEAFE /* Embed Pods Frameworks */,
+				B6DBD17BF7857FF041EC7769 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,11 +246,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B11C8741E332049F66FEAFE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39B61DFC449AD68975ED4027 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A44008EF781C2EFCF23D01 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6DBD17BF7857FF041EC7769 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9AB5E1967F63C3E563353D0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF5B928549D8140051F411EF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		848FDFF91ACDE40400C61CDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848FE01D1ACDE42F00C61CDE /* WebSocketHandler.swift in Sources */,
+				848FE01F1ACDE42F00C61CDE /* RCTWebSocketManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +455,9 @@
 		};
 		848FE0151ACDE40400C61CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9C7851A55C235377D8C590 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +467,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		848FE0161ACDE40400C61CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C33577118277E20C2D393B /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -348,6 +490,7 @@
 		};
 		848FE0181ACDE40400C61CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9C7851A55C235377D8C590 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -365,6 +508,7 @@
 		};
 		848FE0191ACDE40400C61CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C33577118277E20C2D393B /* Pods.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -395,6 +539,7 @@
 				848FE0161ACDE40400C61CDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848FE0171ACDE40400C61CDE /* Build configuration list for PBXNativeTarget "RCTWebSocketTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +548,7 @@
 				848FE0191ACDE40400C61CDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
