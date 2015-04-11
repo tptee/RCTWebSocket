@@ -5,9 +5,10 @@
 @implementation RCTWebSocketManager
 @synthesize bridge = _bridge;
 
-- (void)connect:(NSString *)host callback:(RCTResponseSenderBlock)callback
+RCT_EXPORT_MODULE()
+
+RCT_EXPORT_METHOD(connect:(NSString *)host callback:(RCTResponseSenderBlock)callback)
 {
-	RCT_EXPORT();
 	__weak typeof(self) weakSelf = self;
 	
 	self.ws = [[WebSocketHandler alloc] init];

@@ -1,15 +1,25 @@
 PODS:
-  - React (0.2.1):
-    - React/Core (= 0.2.1)
-  - React/Core (0.2.1)
-  - Starscream (0.9.2)
+  - React (0.3.1):
+    - React/Core (= 0.3.1)
+  - React/Core (0.3.1)
+  - Starscream (0.9.3)
 
 DEPENDENCIES:
-  - React (= 0.2.1)
-  - Starscream (= 0.9.2)
+  - React (from `https://github.com/facebook/react-native`, branch `master`)
+  - Starscream (= 0.9.3)
+
+EXTERNAL SOURCES:
+  React:
+    :branch: master
+    :git: https://github.com/facebook/react-native
+
+CHECKOUT OPTIONS:
+  React:
+    :commit: 6b91f7e1f1faa2cbb815ba21ddc1e87412a8531f
+    :git: https://github.com/facebook/react-native
 
 SPEC CHECKSUMS:
-  React: a7828490bf8e5976d201558a28cb812c498a0eeb
-  Starscream: 7b58834eff655baf6ec456c5dd056ec62fd147c9
+  React: 9b75ed68d95b2459dc8a9aa701f2de1fd82c6a50
+  Starscream: b5d9ce738fcf55c23bb2174c368a6490e946d831
 
 COCOAPODS: 0.36.3
