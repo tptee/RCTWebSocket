@@ -1,11 +1,11 @@
-#import <UIKit/UIKit.h>
-@import React;
-//! Project version number for RCTWebSocket.
-FOUNDATION_EXPORT double RCTWebSocketVersionNumber;
+#import <Foundation/Foundation.h>
+#import <jetfire/JFRWebSocket.h>
+#import <RCTBridgeModule.h>
+#import <RCTEventDispatcher.h>
 
-//! Project version string for RCTWebSocket.
-FOUNDATION_EXPORT const unsigned char RCTWebSocketVersionString[];
+@interface RCTWebSocket : NSObject<RCTBridgeModule, JFRWebSocketDelegate>
 
-// In this header, you should import all the public headers of your framework using statements like #import <RCTWebSocket/PublicHeader.h>
+@property (strong, nonatomic) JFRWebSocket *ws;
+@property (weak, nonatomic) RCTResponseSenderBlock callback;
 
-#import <RCTWebSocket/RCTWebSocketManager.h>
+@end

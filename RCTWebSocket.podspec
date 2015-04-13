@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/tptee/RCTWebSocket"
   s.license          = 'MIT'
   s.author           = { "Tyler Thompson" => "tyler@tylerpaulthompson.com" }
-  s.source           = { :git => "https://github.com/tptee/WebSocketReactNative.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/tptee/RCTWebSocket.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
@@ -15,6 +15,5 @@ Pod::Spec.new do |s|
     'RCTWebSocket' => ['Pod/Assets/*.png']
   }
 
-  s.dependency 'Starscream', '~> 0.9.2'
-  s.dependency 'React', '~> 0.2.1'
+  s.dependency 'ReactFork', '~> 0.3.11'
 end

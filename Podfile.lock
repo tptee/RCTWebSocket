@@ -1,12 +1,12 @@
 PODS:
+  - jetfire (0.1.2)
   - React (0.3.1):
     - React/Core (= 0.3.1)
   - React/Core (0.3.1)
-  - Starscream (0.9.3)
 
 DEPENDENCIES:
+  - Jetfire (= 0.1.2)
   - React (from `https://github.com/facebook/react-native`, branch `master`)
-  - Starscream (= 0.9.3)
 
 EXTERNAL SOURCES:
   React:
@@ -19,7 +19,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/facebook/react-native
 
 SPEC CHECKSUMS:
+  jetfire: 5e823aa9248d3de1fac2b7b6d9c6e31ab7d90f0c
   React: 9b75ed68d95b2459dc8a9aa701f2de1fd82c6a50
-  Starscream: b5d9ce738fcf55c23bb2174c368a6490e946d831
 
 COCOAPODS: 0.36.3
