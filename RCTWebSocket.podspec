@@ -15,5 +15,6 @@ Pod::Spec.new do |s|
     'RCTWebSocket' => ['Pod/Assets/*.png']
   }
 
-  s.dependency 'ReactFork', '~> 0.3.11'
+  s.dependency 'React', '~> 0.4.0'
+  s.dependency 'PocketSocket', '~> 0.6.4'
 end

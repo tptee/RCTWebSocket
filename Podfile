@@ -4,5 +4,5 @@ platform :ios, '8.0'
 
 link_with 'RCTWebSocket', 'RCTWebSocketTests'
 
-pod 'Jetfire', '0.1.2'
-pod 'React', :git => 'https://github.com/facebook/react-native', :branch => 'master'
+pod 'PocketSocket', '0.6.4'
+pod 'React', '0.4.0'

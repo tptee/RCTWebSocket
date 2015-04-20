@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
-#import <jetfire/JFRWebSocket.h>
+#import <PocketSocket/PSWebSocket.h>
 #import <RCTBridgeModule.h>
 #import <RCTEventDispatcher.h>
 
-@interface RCTWebSocket : NSObject<RCTBridgeModule, JFRWebSocketDelegate>
+@interface RCTWebSocket : NSObject<RCTBridgeModule, PSWebSocketDelegate>
 
-@property (strong, nonatomic) JFRWebSocket *ws;
+@property (strong, nonatomic) PSWebSocket *ws;
 @property (weak, nonatomic) RCTResponseSenderBlock callback;
 
 @end

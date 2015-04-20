@@ -1,25 +1,15 @@
 PODS:
-  - jetfire (0.1.2)
-  - React (0.3.1):
-    - React/Core (= 0.3.1)
-  - React/Core (0.3.1)
+  - PocketSocket (0.6.4)
+  - React (0.4.0):
+    - React/Core (= 0.4.0)
+  - React/Core (0.4.0)
 
 DEPENDENCIES:
-  - Jetfire (= 0.1.2)
-  - React (from `https://github.com/facebook/react-native`, branch `master`)
-
-EXTERNAL SOURCES:
-  React:
-    :branch: master
-    :git: https://github.com/facebook/react-native
-
-CHECKOUT OPTIONS:
-  React:
-    :commit: 6b91f7e1f1faa2cbb815ba21ddc1e87412a8531f
-    :git: https://github.com/facebook/react-native
+  - PocketSocket (= 0.6.4)
+  - React (= 0.4.0)
 
 SPEC CHECKSUMS:
-  jetfire: 5e823aa9248d3de1fac2b7b6d9c6e31ab7d90f0c
-  React: 9b75ed68d95b2459dc8a9aa701f2de1fd82c6a50
+  PocketSocket: eee7ef375f55b98e7ca79e097d9c61fd688e9494
+  React: fd7c744a4445caf86b6e6df247845d12a7182c1a
 
 COCOAPODS: 0.36.3
