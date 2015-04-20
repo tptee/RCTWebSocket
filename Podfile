@@ -4,6 +4,5 @@ use_frameworks!
 
 link_with 'RCTWebSocket', 'RCTWebSocketTests'
 
-#pod 'React/Core', '= 0.3.1'
+pod 'React', '0.4.0'
 pod 'Starscream', '0.9.3'
-pod 'React', :git => 'https://github.com/facebook/react-native', :branch => 'master'
