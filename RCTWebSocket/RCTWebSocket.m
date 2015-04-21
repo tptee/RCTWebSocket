@@ -1,53 +1,39 @@
 #import "RCTWebSocket.h"
 #import <Foundation/Foundation.h>
-#import <PocketSocket/PSWebSocket.h>
+#import <jetfire/JFRWebSocket.h>
 #import <RCTLog.h>
 #import <RCTBridge.h>
 #import <RCTBridgeModule.h>
 #import <RCTEventDispatcher.h>
 
-
 @implementation RCTWebSocket
-
-RCT_EXPORT_MODULE();
 
 @synthesize bridge = _bridge;
 
+RCT_EXPORT_MODULE();
+
 RCT_EXPORT_METHOD(connect:(NSString *)host callback:(RCTResponseSenderBlock)callback) {
 	self.callback = callback;
-	self.ws = [[PSWebSocket alloc] init];
-	// create the NSURLRequest that will be sent as the handshake
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:host]];
-	
-	// create the socket and assign delegate
-	self.ws = [PSWebSocket clientSocketWithRequest:request];
-	self.ws.delegate = self;
-	
-	[self.ws open];
+	self.ws = [[JFRWebSocket alloc] initWithURL:[NSURL URLWithString:host] protocols:nil];
 }
 
--(void)webSocketDidOpen:(PSWebSocket *)webSocket {
+- (void)websocketDidConnect:(JFRWebSocket *)socket {
 	self.callback(@[[NSNull null], @"Connected to WebSocket."]);
-
 }
 
--(void)webSocket:(PSWebSocket *)webSocket didReceiveMessage:(id)message {
+- (void)websocket:(JFRWebSocket *)socket didReceiveMessage:(NSString *)string {
 	[self.bridge.eventDispatcher
 		sendDeviceEventWithName:@"WebSocketMessage"
-		body:(NSString *)message];
+		body:string];
 }
 
-- (void)webSocket:(PSWebSocket *)webSocket didFailWithError:(NSError *)error {
-	NSLog(@"The websocket handshake/connection failed with an error: %@", error);
-	[self.bridge.eventDispatcher
-		sendDeviceEventWithName:@"WebSocketError"
-		body:error.localizedDescription];
-}
-- (void)webSocket:(PSWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
-	NSLog(@"The websocket closed with code: %@, reason: %@, wasClean: %@", @(code), reason, (wasClean) ? @"YES" : @"NO");
+- (void)websocketDidDisconnect:(JFRWebSocket *)socket error:(NSError *)error {
+	if (error) {
+		NSLog(@"%@", [error localizedDescription]);
+	}
+	
 	[self.bridge.eventDispatcher
 		sendDeviceEventWithName:@"WebSocketDisconnect"
 		body:@"Disconnected from WebSocket."];
 }
-
 @end
