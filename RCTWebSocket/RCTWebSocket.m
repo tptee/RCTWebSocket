@@ -6,11 +6,12 @@
 #import <RCTBridgeModule.h>
 #import <RCTEventDispatcher.h>
 
+
 @implementation RCTWebSocket
 
-@synthesize bridge = _bridge;
-
 RCT_EXPORT_MODULE();
+
+@synthesize bridge = _bridge;
 
 RCT_EXPORT_METHOD(connect:(NSString *)host callback:(RCTResponseSenderBlock)callback) {
 	self.callback = callback;
