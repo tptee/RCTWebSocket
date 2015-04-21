@@ -1,15 +1,15 @@
 PODS:
-  - PocketSocket (0.6.4)
+  - jetfire (0.1.2)
   - React (0.4.0):
     - React/Core (= 0.4.0)
   - React/Core (0.4.0)
 
 DEPENDENCIES:
-  - PocketSocket (= 0.6.4)
+  - Jetfire (= 0.1.2)
   - React (= 0.4.0)
 
 SPEC CHECKSUMS:
-  PocketSocket: eee7ef375f55b98e7ca79e097d9c61fd688e9494
+  jetfire: 5e823aa9248d3de1fac2b7b6d9c6e31ab7d90f0c
   React: fd7c744a4445caf86b6e6df247845d12a7182c1a
 
 COCOAPODS: 0.36.3

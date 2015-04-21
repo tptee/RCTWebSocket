@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   }
 
   s.dependency 'React', '~> 0.4.0'
-  s.dependency 'PocketSocket', '~> 0.6.4'
+  s.dependency 'jetfire', '~> 0.1.2'
 end
